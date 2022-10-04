@@ -1,0 +1,16 @@
+export SYMFONY_VERSION ?= ^5.2
+
+init:
+	ddev start
+	ddev init
+	ddev launch
+
+start:
+	ddev start
+	ddev launch
+
+stop:
+	ddev stop
+
+info:
+	ddev describe

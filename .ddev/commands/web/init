@@ -1,0 +1,20 @@
+#!/bin/bash
+
+## Usage: init
+
+if [ -f ./symfony.lock ];
+    then echo "File symfony.lock found!" && exit;
+    else echo "Start init new project!";
+fi
+
+if [ -f ./composer.lock ];
+    then echo "File composer.lock found!" && exit;
+    else echo "--------------------------";
+fi
+
+composer create-project symfony/skeleton:${SYMFONY_VERSION} .temp --no-interaction
+# loschen der composer.json
+rm -f ./composer.json
+cp -Rfn .temp/* .temp/.* ./
+rm -R ./.temp
+composer install

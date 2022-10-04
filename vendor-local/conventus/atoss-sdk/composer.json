@@ -1,0 +1,24 @@
+{
+  "name": "conventus/atoss-sdk",
+  "type": "library",
+  "license": "MIT",
+  "version": "0.0.1",
+  "autoload": {
+    "psr-4": {
+      "Conventus\\Atoss\\": "src/Conventus/Atoss/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Matthias Fischer",
+      "email": "matthias.fischer@conventus.de"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "ext-dom": "*",
+    "ext-mbstring": "*",
+    "ext-soap": "*",
+    "wsdltophp/packagebase": "~5.0"
+  }
+}
